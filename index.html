@@ -1,111 +1,1405 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Hassan | Digital Marketing Specialist</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Hassan Asghar | Digital Marketing & E-Commerce Specialist</title>
+
+<meta name="description" content="Hassan Asghar — Digital Marketing, Shopify E-Commerce, Meta Ads and Performance Marketing Specialist.">
+
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial, sans-serif;
-margin:0;
-background:#f5f5f5;
-color:#333;
+    background:#08070b;
+    color:#f7f4fb;
+    font-family:Inter,Arial,sans-serif;
+    overflow-x:hidden;
 }
+
+body:before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#6d3bb5;
+    filter:blur(180px);
+    opacity:.16;
+    top:-200px;
+    left:-200px;
+    pointer-events:none;
+    z-index:-1;
+}
+
+body:after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#b06cff;
+    filter:blur(180px);
+    opacity:.08;
+    bottom:-200px;
+    right:-150px;
+    pointer-events:none;
+    z-index:-1;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* NAVBAR */
+
 header{
-background:#111827;
-color:white;
-padding:50px 20px;
-text-align:center;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(8,7,11,.72);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
-section{
-background:white;
-margin:20px;
-padding:30px;
-border-radius:15px;
+
+.nav{
+    height:76px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
-h2{
-color:#111827;
+
+.logo{
+    font-family:"Space Grotesk";
+    font-size:27px;
+    font-weight:700;
+    letter-spacing:-1px;
 }
-.skills span{
-display:inline-block;
-background:#111827;
-color:white;
-padding:8px 15px;
-margin:5px;
-border-radius:20px;
+
+.logo span{
+    color:#a66cff;
 }
+
+.nav-links{
+    display:flex;
+    gap:34px;
+}
+
+.nav-links a{
+    color:#aaa4b3;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#c08cff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    padding:160px 0 100px;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:70px;
+    align-items:center;
+}
+
+.status{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:9px 15px;
+    border:1px solid rgba(166,108,255,.28);
+    background:rgba(166,108,255,.07);
+    border-radius:50px;
+    color:#cdaaff;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:27px;
+}
+
+.status i{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#48dc7b;
+    box-shadow:0 0 12px #48dc7b;
+}
+
+.hero h1{
+    font-family:"Space Grotesk";
+    font-size:clamp(50px,7vw,86px);
+    line-height:.96;
+    letter-spacing:-5px;
+    max-width:850px;
+}
+
+.hero h1 .purple{
+    color:#a86cff;
+}
+
+.hero h1 .outline{
+    color:transparent;
+    -webkit-text-stroke:1px #b89bd6;
+}
+
+.hero-description{
+    max-width:670px;
+    color:#a7a1ae;
+    font-size:17px;
+    line-height:1.8;
+    margin:28px 0 35px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
 .btn{
-background:#111827;
-color:white;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
+    padding:15px 23px;
+    border-radius:12px;
+    font-weight:700;
+    font-size:14px;
+    transition:.35s;
+}
+
+.btn-primary{
+    background:#a66cff;
+    color:#100b15;
+    box-shadow:0 0 35px rgba(166,108,255,.22);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 40px rgba(166,108,255,.35);
+}
+
+.btn-outline{
+    border:1px solid #332d3b;
+    background:rgba(255,255,255,.025);
+    color:#eee9f2;
+}
+
+.btn-outline:hover{
+    border-color:#a66cff;
+    transform:translateY(-4px);
+}
+
+/* HERO CARD */
+
+.hero-visual{
+    position:relative;
+}
+
+.glow-card{
+    padding:1px;
+    border-radius:30px;
+    background:linear-gradient(145deg,rgba(190,136,255,.65),rgba(255,255,255,.05),rgba(120,58,190,.4));
+    transform:rotate(2deg);
+    box-shadow:0 30px 100px rgba(80,30,130,.25);
+}
+
+.visual-inner{
+    background:linear-gradient(145deg,#17121e,#0e0c12);
+    border-radius:29px;
+    padding:34px;
+}
+
+.visual-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:55px;
+}
+
+.visual-label{
+    color:#8f8998;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.visual-icon{
+    width:38px;
+    height:38px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:#21182c;
+    color:#bd8aff;
+}
+
+.visual-inner h2{
+    font-family:"Space Grotesk";
+    font-size:48px;
+    letter-spacing:-2px;
+}
+
+.visual-inner p{
+    color:#8f8998;
+    margin-top:7px;
+    font-size:13px;
+}
+
+.mini-stats{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.mini-stat{
+    padding:19px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:15px;
+}
+
+.mini-stat strong{
+    display:block;
+    font-family:"Space Grotesk";
+    font-size:22px;
+    color:#c99cff;
+}
+
+.mini-stat span{
+    color:#77717e;
+    font-size:11px;
+}
+
+/* SECTION */
+
+section{
+    padding:120px 0;
+}
+
+.section-number{
+    color:#8d52c7;
+    font-size:12px;
+    letter-spacing:3px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-family:"Space Grotesk";
+    font-size:clamp(38px,5vw,60px);
+    line-height:1;
+    letter-spacing:-3px;
+}
+
+.section-subtitle{
+    color:#85808c;
+    max-width:620px;
+    line-height:1.7;
+    margin-top:18px;
+}
+
+/* ABOUT */
+
+.about{
+    border-top:1px solid #19161d;
+}
+
+.about-grid{
+    margin-top:55px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+}
+
+.about-text{
+    color:#aaa4b0;
+    line-height:1.9;
+    font-size:16px;
+}
+
+.about-text p{
+    margin-bottom:18px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:28px;
+}
+
+.skill{
+    padding:9px 13px;
+    border:1px solid #29232f;
+    border-radius:50px;
+    color:#c5becd;
+    font-size:12px;
+    background:#0e0c11;
+}
+
+.info-box{
+    border:1px solid #28222e;
+    background:linear-gradient(145deg,#100d14,#0b090d);
+    border-radius:24px;
+    padding:30px;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:17px 0;
+    border-bottom:1px solid #211c25;
+}
+
+.info-row:last-child{
+    border-bottom:0;
+}
+
+.info-row small{
+    color:#6f6976;
+}
+
+.info-row strong{
+    text-align:right;
+    font-size:13px;
+    color:#d8d1df;
+}
+
+/* EXPERIENCE */
+
+.experience{
+    background:#0c0a0f;
+    border-top:1px solid #19161d;
+    border-bottom:1px solid #19161d;
+}
+
+.jobs{
+    margin-top:55px;
+    display:grid;
+    gap:12px;
+}
+
+.job{
+    display:grid;
+    grid-template-columns:70px 1fr auto;
+    gap:20px;
+    align-items:center;
+    padding:26px 28px;
+    border:1px solid #25202b;
+    background:#100e13;
+    border-radius:20px;
+    transition:.35s;
+}
+
+.job:hover{
+    transform:translateX(7px);
+    border-color:#7542a5;
+    background:#131019;
+}
+
+.job-number{
+    color:#8251ad;
+    font-family:"Space Grotesk";
+    font-weight:700;
+}
+
+.job h3{
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.job-role{
+    color:#b57cff;
+    font-size:13px;
+    font-weight:700;
+}
+
+.job-date{
+    color:#68626e;
+    font-size:12px;
+}
+
+/* RESULTS */
+
+.results{
+    border-bottom:1px solid #19161d;
+}
+
+.results-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:30px;
+    margin-bottom:55px;
+}
+
+.results-badge{
+    border:1px solid #34283e;
+    padding:12px 17px;
+    border-radius:50px;
+    color:#b98be1;
+    font-size:12px;
+    white-space:nowrap;
+}
+
+.results-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.result-card{
+    border:1px solid #25202c;
+    border-radius:25px;
+    overflow:hidden;
+    background:#0e0c12;
+    transition:.4s;
+}
+
+.result-card:hover{
+    transform:translateY(-8px);
+    border-color:#7140a0;
+    box-shadow:0 25px 70px rgba(80,35,120,.18);
+}
+
+.image-wrap{
+    position:relative;
+    overflow:hidden;
+    background:#17131d;
+}
+
+.image-wrap img{
+    display:block;
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    transition:.6s;
+    cursor:zoom-in;
+}
+
+.result-card:hover img{
+    transform:scale(1.035);
+}
+
+.image-overlay{
+    position:absolute;
+    inset:auto 15px 15px auto;
+    padding:8px 12px;
+    border-radius:50px;
+    background:rgba(8,7,11,.8);
+    backdrop-filter:blur(8px);
+    color:#d4aaff;
+    font-size:11px;
+}
+
+.result-info{
+    padding:22px;
+}
+
+.result-info h3{
+    font-family:"Space Grotesk";
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.result-info p{
+    color:#77717e;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* BIG RESULTS */
+
+.big-results{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.big-result{
+    padding:30px 20px;
+    background:linear-gradient(145deg,#151019,#0d0b10);
+    border:1px solid #27212e;
+    border-radius:20px;
+}
+
+.big-result strong{
+    display:block;
+    color:#bd89e8;
+    font-family:"Space Grotesk";
+    font-size:31px;
+    margin-bottom:6px;
+}
+
+.big-result span{
+    color:#6f6975;
+    font-size:12px;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:130px 0;
+}
+
+.contact-card{
+    position:relative;
+    overflow:hidden;
+    border:1px solid #4c3560;
+    border-radius:32px;
+    padding:75px 50px;
+    text-align:center;
+    background:
+        radial-gradient(circle at 50% 120%,rgba(150,77,230,.32),transparent 45%),
+        linear-gradient(145deg,#17111f,#0c0a0f);
+}
+
+.contact-card:before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#9b5be0;
+    filter:blur(140px);
+    opacity:.12;
+    left:50%;
+    top:-180px;
+    transform:translateX(-50%);
+}
+
+.contact-card h2{
+    position:relative;
+    font-family:"Space Grotesk";
+    font-size:clamp(38px,5vw,62px);
+    letter-spacing:-3px;
+}
+
+.contact-card p{
+    position:relative;
+    color:#85808c;
+    margin:18px auto 30px;
+    max-width:580px;
+}
+
+.contact-links{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.contact-link{
+    padding:13px 20px;
+    border-radius:10px;
+    background:#f4eff8;
+    color:#161119;
+    font-size:13px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.contact-link:hover{
+    transform:translateY(-3px);
+    background:#bd8aff;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #19161d;
+    padding:28px 0;
+    color:#5f5966;
+    text-align:center;
+    font-size:12px;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(0,0,0,.94);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+}
+
+.lightbox.show{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    top:22px;
+    right:28px;
+    font-size:38px;
+    color:white;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        padding-top:130px;
+    }
+
+    .hero-grid,
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-visual{
+        margin-top:20px;
+    }
+
+    .results-header{
+        display:block;
+    }
+
+    .results-badge{
+        display:inline-block;
+        margin-top:25px;
+    }
+
+    .big-results{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .job{
+        grid-template-columns:45px 1fr;
+    }
+
+    .job-date{
+        grid-column:2;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .hero h1{
+        font-size:48px;
+        letter-spacing:-3px;
+    }
+
+    .visual-inner{
+        padding:25px;
+    }
+
+    .visual-inner h2{
+        font-size:40px;
+    }
+
+    .results-grid{
+        grid-template-columns:1fr;
+    }
+
+    .big-results{
+        grid-template-columns:1fr;
+    }
+
+    .contact-card{
+        padding:55px 22px;
+    }
+
+    .info-row{
+        display:block;
+    }
+
+    .info-row strong{
+        display:block;
+        text-align:left;
+        margin-top:5px;
+    }
 }
 </style>
-
 </head>
 
 <body>
 
+<!-- NAV -->
+
 <header>
-<h1>Hassan</h1>
-<h2 style="color:white;">Digital Marketing Specialist</h2>
-<p>E-commerce Manager | Shopify Expert | Meta Ads Specialist</p>
-<p>6+ Years Experience</p>
+<div class="container nav">
+
+<a href="#" class="logo">Hassan<span>.</span></a>
+
+<nav class="nav-links">
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#results">Results</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
 </header>
 
 
-<section>
-<h2>About Me</h2>
-<p>
-I am a Digital Marketing Specialist from Lahore with 6+ years of experience
-in E-commerce, Shopify management and Meta Ads. I have worked with multiple
-brands to grow online sales and build successful digital strategies.
-</p>
-</section>
+<!-- HERO -->
 
+<section class="hero">
 
-<section>
-<h2>Skills</h2>
-<div class="skills">
-<span>Shopify</span>
-<span>Meta Ads Manager</span>
-<span>E-commerce</span>
-<span>Digital Marketing</span>
-<span>Performance Marketing</span>
+<div class="container hero-grid">
+
+<div>
+
+<div class="status">
+<i></i>
+Open to New Opportunities
 </div>
+
+<h1>
+Digital Marketing<br>
+<span class="purple">& E-Commerce</span><br>
+<span class="outline">Specialist.</span>
+</h1>
+
+<p class="hero-description">
+Results-driven Digital Marketing and E-Commerce professional
+with hands-on experience in Shopify, Meta Ads, Google Ads,
+social media marketing, conversion optimization and online
+store growth.
+</p>
+
+<div class="buttons">
+
+<a href="#results" class="btn btn-primary">
+View My Results →
+</a>
+
+<a href="mailto:ecombyhasan@gmail.com" class="btn btn-outline">
+Let's Connect
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-visual">
+
+<div class="glow-card">
+
+<div class="visual-inner">
+
+<div class="visual-top">
+<span class="visual-label">Performance Profile</span>
+<span class="visual-icon">✦</span>
+</div>
+
+<h2>Growth.</h2>
+
+<p>Shopify • Meta Ads • E-Commerce • Digital Marketing</p>
+
+<div class="mini-stats">
+
+<div class="mini-stat">
+<strong>5+</strong>
+<span>Years Experience</span>
+</div>
+
+<div class="mini-stat">
+<strong>10K+</strong>
+<span>Orders Managed</span>
+</div>
+
+<div class="mini-stat">
+<strong>45.9M</strong>
+<span>Sales Example</span>
+</div>
+
+<div class="mini-stat">
+<strong>1.7%</strong>
+<span>Conversion</span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<section>
-<h2>Experience</h2>
+<!-- ABOUT -->
 
-<h3>Currently Working</h3>
-<p>Sultania</p>
-<p>Seharbano</p>
+<section class="about" id="about">
 
-<h3>Previous Brand Experience</h3>
-<p>Kohsaar</p>
-<p>Khanpuri Sweets</p>
-<p>Zarsah</p>
-<p>Heer Pret</p>
+<div class="container">
+
+<div class="section-number">01 — ABOUT ME</div>
+
+<h2 class="section-title">
+Building brands.<br>
+Driving growth.
+</h2>
+
+<p class="section-subtitle">
+I combine e-commerce operations, performance marketing and
+creative strategy to help online businesses grow.
+</p>
+
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<p>
+I am a dedicated and results-driven E-Commerce and Digital
+Marketing professional with hands-on experience in managing
+online businesses, Shopify stores, paid advertising campaigns,
+social media and digital growth strategies.
+</p>
+
+<p>
+My experience includes Shopify store management, Meta Ads,
+Google Ads, content strategy, SEO, customer support and
+performance optimization.
+</p>
+
+<div class="skills">
+
+<span class="skill">Shopify</span>
+<span class="skill">Meta Ads</span>
+<span class="skill">Google Ads</span>
+<span class="skill">Facebook Marketing</span>
+<span class="skill">Instagram</span>
+<span class="skill">TikTok</span>
+<span class="skill">SEO</span>
+<span class="skill">Content Strategy</span>
+<span class="skill">E-Commerce</span>
+<span class="skill">Brand Growth</span>
+
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-row">
+<small>Name</small>
+<strong>Hassan Asghar</strong>
+</div>
+
+<div class="info-row">
+<small>Education</small>
+<strong>BBA — Punjab University</strong>
+</div>
+
+<div class="info-row">
+<small>Commerce</small>
+<strong>I.Com — Al Syed Institute</strong>
+</div>
+
+<div class="info-row">
+<small>Languages</small>
+<strong>English · Urdu</strong>
+</div>
+
+<div class="info-row">
+<small>Email</small>
+<strong>ecombyhasan@gmail.com</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<section>
-<h2>Education</h2>
-<p>Bachelor of Business Administration (BBA)</p>
+<!-- EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+<div class="container">
+
+<div class="section-number">02 — EXPERIENCE</div>
+
+<h2 class="section-title">
+Experience that<br>
+delivers results.
+</h2>
+
+<p class="section-subtitle">
+Professional experience across fashion, e-commerce,
+digital marketing and online business operations.
+</p>
+
+
+<div class="jobs">
+
+<div class="job">
+<div class="job-number">01</div>
+<div>
+<h3>SeharBanoShop.com</h3>
+<div class="job-role">Digital Marketing Manager</div>
+</div>
+<div class="job-date">April 2025 – Present</div>
+</div>
+
+<div class="job">
+<div class="job-number">02</div>
+<div>
+<h3>KohsaarShop.com</h3>
+<div class="job-role">E-Commerce Manager</div>
+</div>
+<div class="job-date">2021 – Present</div>
+</div>
+
+<div class="job">
+<div class="job-number">03</div>
+<div>
+<h3>Sultania.pk</h3>
+<div class="job-role">E-Commerce Operations Lead</div>
+</div>
+<div class="job-date">2021 – Present</div>
+</div>
+
+<div class="job">
+<div class="job-number">04</div>
+<div>
+<h3>Zarsah.com</h3>
+<div class="job-role">Digital Marketing Executive</div>
+</div>
+<div class="job-date">6 Months</div>
+</div>
+
+<div class="job">
+<div class="job-number">05</div>
+<div>
+<h3>Khanpuri Sweets</h3>
+<div class="job-role">Digital Marketing Specialist</div>
+</div>
+<div class="job-date">Ongoing Project</div>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<section>
-<h2>Contact</h2>
-<p>Email: ecombyhasan@gmail.com</p>
-<p>Phone: 03144194182</p>
-<p>Lahore, Pakistan</p>
+<!-- RESULTS -->
+
+<section class="results" id="results">
+
+<div class="container">
+
+<div class="results-header">
+
+<div>
+
+<div class="section-number">03 — PERFORMANCE</div>
+
+<h2 class="section-title">
+Real work.<br>
+Real numbers.
+</h2>
+
+<p class="section-subtitle">
+Selected Shopify analytics and Meta Ads campaign
+screenshots from e-commerce projects.
+</p>
+
+</div>
+
+<div class="results-badge">
+● VERIFIED WORK SAMPLES
+</div>
+
+</div>
+
+
+<div class="results-grid">
+
+
+<!-- 1 -->
+
+<div class="result-card">
+
+<div class="image-wrap">
+
+<img src="images/shopify-dec.jpg"
+alt="Shopify December Results"
+onclick="showImage(this.src)">
+
+<div class="image-overlay">
+SHOPIFY ANALYTICS
+</div>
+
+</div>
+
+<div class="result-info">
+<h3>December Store Performance</h3>
+<p>
+33,491 sessions · Rs 2.7M total sales ·
+611 orders · 1.7% conversion rate.
+</p>
+</div>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="result-card">
+
+<div class="image-wrap">
+
+<img src="images/meta-dec.jpg"
+alt="Meta Ads December Results"
+onclick="showImage(this.src)">
+
+<div class="image-overlay">
+META ADS
+</div>
+
+</div>
+
+<div class="result-info">
+<h3>December Paid Campaigns</h3>
+<p>
+Meta sales campaigns with website purchases,
+reach, impressions and cost-per-result tracking.
+</p>
+</div>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="result-card">
+
+<div class="image-wrap">
+
+<img src="images/shopify-year.jpg"
+alt="Shopify Annual Results"
+onclick="showImage(this.src)">
+
+<div class="image-overlay">
+ANNUAL RESULTS
+</div>
+
+</div>
+
+<div class="result-info">
+<h3>12-Month E-Commerce Performance</h3>
+<p>
+482,133 sessions · Rs 40.5M sales ·
+9,161 orders · 1.81% conversion rate.
+</p>
+</div>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="result-card">
+
+<div class="image-wrap">
+
+<img src="images/meta-year.jpg"
+alt="Meta Ads Annual Results"
+onclick="showImage(this.src)">
+
+<div class="image-overlay">
+META ADS
+</div>
+
+</div>
+
+<div class="result-info">
+<h3>Annual Meta Campaign Management</h3>
+<p>
+Multiple campaigns managed with focus on
+sales, purchases, reach and efficiency.
+</p>
+</div>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="result-card">
+
+<div class="image-wrap">
+
+<img src="images/shopify-nov.jpg"
+alt="Shopify November Results"
+onclick="showImage(this.src)">
+
+<div class="image-overlay">
+SHOPIFY
+</div>
+
+</div>
+
+<div class="result-info">
+<h3>November Store Performance</h3>
+<p>
+43,427 sessions · Rs 3.67M sales ·
+780 orders · 1.64% conversion rate.
+</p>
+</div>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="result-card">
+
+<div class="image-wrap">
+
+<img src="images/meta-nov.jpg"
+alt="Meta Ads November Results"
+onclick="showImage(this.src)">
+
+<div class="image-overlay">
+META ADS
+</div>
+
+</div>
+
+<div class="result-info">
+<h3>November Advertising Campaigns</h3>
+<p>
+Sales campaigns with website purchases,
+reach, impressions and ad-spend analysis.
+</p>
+</div>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="result-card">
+
+<div class="image-wrap">
+
+<img src="images/shopify-2025.jpg"
+alt="Shopify 2025 Analytics"
+onclick="showImage(this.src)">
+
+<div class="image-overlay">
+SHOPIFY
+</div>
+
+</div>
+
+<div class="result-info">
+<h3>2025 Shopify Analytics</h3>
+<p>
+Sales, sessions, orders, conversion rate,
+customer behaviour and store performance.
+</p>
+</div>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="result-card">
+
+<div class="image-wrap">
+
+<img src="images/shopify-dashboard.jpg"
+alt="Shopify Dashboard"
+onclick="showImage(this.src)">
+
+<div class="image-overlay">
+DASHBOARD
+</div>
+
+</div>
+
+<div class="result-info">
+<h3>E-Commerce Growth Dashboard</h3>
+<p>
+Data-driven monitoring and optimization of
+online store performance.
+</p>
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="big-results">
+
+<div class="big-result">
+<strong>Rs 45.9M</strong>
+<span>Sales Performance Example</span>
+</div>
+
+<div class="big-result">
+<strong>10.9K</strong>
+<span>Orders Example</span>
+</div>
+
+<div class="big-result">
+<strong>605K+</strong>
+<span>Sessions Example</span>
+</div>
+
+<div class="big-result">
+<strong>1.7%</strong>
+<span>Conversion Rate</span>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="contact-card">
+
+<div class="section-number">04 — LET'S CONNECT</div>
+
+<h2>Let's grow something<br>great together.</h2>
+
+<p>
+Looking for opportunities in Digital Marketing,
+E-Commerce, Shopify, Performance Marketing or
+Fashion E-Commerce.
+</p>
+
+<div class="contact-links">
+
+<a class="contact-link"
+href="mailto:ecombyhasan@gmail.com">
+✉ ecombyhasan@gmail.com
+</a>
+
+<a class="contact-link"
+href="https://ecombyhasan-beep.github.io"
+target="_blank">
+↗ Portfolio
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+© 2026 Hassan Asghar · Digital Marketing & E-Commerce Specialist
+</footer>
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox" onclick="hideImage()">
+
+<span class="close">×</span>
+
+<img id="lightboxImg" src="" alt="Portfolio Screenshot">
+
+</div>
+
+
+<script>
+
+function showImage(src){
+
+    document.getElementById("lightboxImg").src = src;
+
+    document
+    .getElementById("lightbox")
+    .classList.add("show");
+
+}
+
+function hideImage(){
+
+    document
+    .getElementById("lightbox")
+    .classList.remove("show");
+
+}
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key === "Escape"){
+        hideImage();
+    }
+
+});
+
+</script>
 
 </body>
 </html>
